@@ -8,3 +8,5 @@ control is done through a webserver, on the esp32 access point.
 Protocol is in the mantis/server/ README
 
 the control client is under the mantis/client/ directory
+
+dont read me
