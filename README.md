@@ -4,9 +4,24 @@ restoring team 4814's 2013 FRC robot purple mantis using an ESP32
 ## Structure
 code for purple mantis is under the mantis/ directory
 
-control is done through a webserver, on the esp32 access point. 
-Protocol is in the mantis/server/ README
-
 the control client is under the mantis/client/ directory
 
-dont read me
+Runs on an ESP32 using the Espruino javascript interpreter
+- web controls are generated using Remix
+- static files are then served using Espruino, alongside server side (ESP32) controls
+
+## Building the code
+
+- use the following bash commands 
+
+- build the control client
+  - requires node
+```
+cd controls
+npm install
+npm run build
+```
+
+- the static website is now in the `controls/public/build` directory
+
+
