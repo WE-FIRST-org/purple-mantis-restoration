@@ -21,7 +21,7 @@ cd controls
 npm install
 npm run build
 ```
-
 - the static website is now in the `controls/public/build` directory
+- move the files in `controls/public` to `mantis/public`
 
 

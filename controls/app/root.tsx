@@ -35,7 +35,7 @@ export default function App() {
         <Links />
       </head>
       <body onKeyDown={keybinds} role='presentation' onKeyUp={keybinds}>
-        <div className="w3-display-container w3-container" style={{ height: '100%', width: '100%', backgroundColor: "rgb(50,50,50)" }}>
+        <div className="w3-display-container w3-container w3-mobile" style={{ height: '100%', width: '100%', backgroundColor: "rgb(50,50,50)" , maxWidth: "100%"}}>
           <div className="w3-display-topmiddle" style={{ height: '44px', width: '90%' }}>
             <div className="" style={{ height: '20px' }}></div>
             <div className="w3-border" style={{ height: '24px', width: '100%' }}>
@@ -43,42 +43,59 @@ export default function App() {
             </div>
           </div>
 
-          <div className='w3-display-left w3-container' id='power'>
-            <div className="w3-row" style={{width: '100%'}}>
-              <div className='w3-col w3-twothird'>
-                <button className="w3-circle w3-grey" id="w" style={{ height: "100px", width: "100px" }}> W </button>
-                <br /><div style={{ height: "10%" }}></div><br />
-                <button className="w3-circle w3-grey" id="s" style={{ height: "100px", width: "100px" }}> S </button>
+        
+
+          <div className="w3-display-left w3-container" id='power' style={{ width: '50%', padding: '0px', maxWidth: '400px' }}>
+            <div className='w3-container' style={{ width: '100%', padding: '0px' }}>
+              <div className='w3-row' style={{ width: '100%', display: 'flex' }} >
+                <div className='w3-col w3-container' style={{maxWidth: '4em', width: '2em', flexGrow: '1'}}></div>
+                <div className='w3-col w3-third w3-container' style={{padding: '0px'}} >
+                  <button className="w3-circle w3-ripple w3-grey" id="w" style={{ height: "5em", width: "5em", padding: '0px'}}> W </button>
+                </div>
+                <div className='w3-col w3-third w3-container' style={{padding: '0px'}}>
+                  <button className="w3-circle w3-ripple w3-grey" id="k" style={{ height: "5em", width: "5em", padding: '0px'}}> K </button>
+                </div>
               </div>
-              <div className="w3-col w3-third">
-                <div style={{ height: "3%" }}></div><br />
-                <button className="w3-circle w3-grey" id="k" style={{ height: "80px", width: "80px" }}> K </button>
-                <br /><div style={{ height: "3%" }}></div><br />
-                <button className="w3-circle w3-grey" id="j" style={{ height: "80px", width: "80px" }}> J </button>
+              <div className='w3-row' style={{ height: '22m', width: '100%', display: 'flex' }} ></div>
+              <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex' }} >
+                <div className='w3-col w3-container' style={{maxWidth: '4em', width: '2em', flexGrow: '1'}}></div>
+                <div className='w3-col w3-third w3-container' style={{padding: '0px'}} >
+                  <button className="w3-circle w3-ripple w3-grey" id="s" style={{ height: "5em", width: "5em", padding: '0px'}}> S </button>
+                </div>
+                <div className='w3-col w3-third w3-container' style={{padding: '0px'}}>
+                  <button className="w3-circle w3-ripple w3-grey" id="j" style={{ height: "5em", width: "5em", padding: '0px'}}> J </button>
+                </div>
+               
               </div>
             </div>
           </div>
-          <div className="w3-display-right w3-container" id='steering' style={{ width: '280px', padding: '0px' }}>
-            <div className='w3-container' style={{}} >
-              <div className='w3-row' style={{ height: '150px' }} ></div>
-              <button className="w3-circle w3-grey" id="a" style={{ height: "100px", width: "100px", display: "inline-block" }}> A </button>
-              <div style={{ height: '10px', width: '10%', display: "inline-block" }}></div>
-              <button className="w3-circle w3-grey" id="d" style={{ height: "100px", width: "100px", display: "inline-block" }}> D </button>
-              <div className='w3-row' style={{ height: '30px' }} ></div>
-              <div className='w3-row'>
-                <div className='w3-col w3-third w3-container'></div>
-                <div className='w3-col w3-third w3-container'>
-                  <button className="w3-circle w3-grey" id="h" style={{ height: "100px", width: "100px" }}> H </button>
+
+          <div className="w3-display-right w3-container" id='steering' style={{ width: '50%', padding: '0px', maxWidth: '400px' }}>
+            <div className='w3-container' style={{ width: '100%', padding: '0px' }}>
+              <div className='w3-row' style={{ height: '3em', width: '100%', display: 'flex' }} ></div>
+              <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex', marginLeft: 'auto' }}> 
+                <div className='w3-col w3-third w3-container' style={{padding: '0px'}} >
+                  <button className="w3-circle w3-ripple w3-grey w3-col w3-third" id="a" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px'}}> A </button>
                 </div>
-                <div className='w3-col w3-third w3-container' />
+                <div className='w3-col w3-third w3-container' style={{padding: '0px'}}>
+                  <button className="w3-circle w3-ripple w3-grey w3-col w3-third" id="d" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px'}}> D </button>
+                </div>
+                <div className='w3-col w3-container' style={{maxWidth: '4em', width: '2em', flexGrow: '1'}}></div>
+              </div>
+              <div className='w3-row' style={{ height: '1em' }} ></div>
+              <div className='w3-row'>
+                <div className='w3-col w3-third w3-container' style={{padding: '0px'}}></div>
+                <div className='w3-col w3-third w3-container' style={{ padding: '0px'}}>
+                  <button className="w3-circle w3-ripple w3-grey" id="h" style={{ height: "5em", width: "5em", padding: '0px' }}> H </button>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="w3-display-bottommiddle w3-container" style={{ width: '75%' }}>
             <div className='w3-col'>
-            <input type="range" min="1" max="100" defaultValue="50" className="slider" id="myRange" style={{ width: '100%' }} />
-            <div className="w3-row" style={{height: '50px'}}></div>
+              <input type="range" min="1" max="100" defaultValue="0" className="slider" id="myRange" style={{ width: '100%' }} />
+              <div className="w3-row" style={{ height: '20px' }}></div>
             </div>
           </div>
         </div>
