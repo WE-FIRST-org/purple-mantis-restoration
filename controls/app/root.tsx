@@ -49,14 +49,14 @@ export default function App() {
             <div className='w3-container' style={{ width: '100%', padding: '0px' }}>
               <div className='w3-row' style={{ width: '100%', display: 'flex' }} >
                 <div className='w3-col w3-container' style={{maxWidth: '4em', width: '2em', flexGrow: '1'}}></div>
-                <div className='w3-col w3-third w3-container' style={{padding: '0px'}} >
+                <div className='w3-col w3-third w3-container' style={{padding: '0px', flexGrow:'0'}} >
                   <button className="w3-circle w3-ripple w3-grey" id="w" style={{ height: "5em", width: "5em", padding: '0px'}}> W </button>
                 </div>
                 <div className='w3-col w3-third w3-container' style={{padding: '0px'}}>
                   <button className="w3-circle w3-ripple w3-grey" id="k" style={{ height: "5em", width: "5em", padding: '0px'}}> K </button>
                 </div>
               </div>
-              <div className='w3-row' style={{ height: '22m', width: '100%', display: 'flex' }} ></div>
+              <div className='w3-row' style={{ height: '0.5em', width: '100%', display: 'flex' }} ></div>
               <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex' }} >
                 <div className='w3-col w3-container' style={{maxWidth: '4em', width: '2em', flexGrow: '1'}}></div>
                 <div className='w3-col w3-third w3-container' style={{padding: '0px'}} >
@@ -72,22 +72,23 @@ export default function App() {
 
           <div className="w3-display-right w3-container" id='steering' style={{ width: '50%', padding: '0px', maxWidth: '400px' }}>
             <div className='w3-container' style={{ width: '100%', padding: '0px' }}>
-              <div className='w3-row' style={{ height: '3em', width: '100%', display: 'flex' }} ></div>
-              <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex', marginLeft: 'auto' }}> 
+              <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex' }} ></div>
+              <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex', marginLeft: 'auto' , alignItems: 'flex-end'}}> 
                 <div className='w3-col w3-third w3-container' style={{padding: '0px'}} >
-                  <button className="w3-circle w3-ripple w3-grey w3-col w3-third" id="a" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px'}}> A </button>
+                  <button className="w3-circle w3-ripple w3-grey w3-col w3-third w3-right" id="a" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px'}}> A </button>
                 </div>
                 <div className='w3-col w3-third w3-container' style={{padding: '0px'}}>
-                  <button className="w3-circle w3-ripple w3-grey w3-col w3-third" id="d" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px'}}> D </button>
+                  <button className="w3-circle w3-ripple w3-grey w3-col w3-third w3-right" id="d" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px'}}> D </button>
                 </div>
-                <div className='w3-col w3-container' style={{maxWidth: '4em', width: '2em', flexGrow: '1'}}></div>
+                <div className='w3-col w3-container' style={{width: '2em', flexGrow: '1'}}></div>
               </div>
               <div className='w3-row' style={{ height: '1em' }} ></div>
-              <div className='w3-row'>
-                <div className='w3-col w3-third w3-container' style={{padding: '0px'}}></div>
-                <div className='w3-col w3-third w3-container' style={{ padding: '0px'}}>
+              <div className='w3-row' style={{display: 'flex', marginLeft: 'auto'}}>
+                <div className='w3-col w3-container' style={{width: '4em', flexGrow: '1'}}></div>
+                <div className='w3-col w3-quarter w3-container' style={{ padding: '0px', flexGrow: '0.5'}}>
                   <button className="w3-circle w3-ripple w3-grey" id="h" style={{ height: "5em", width: "5em", padding: '0px' }}> H </button>
                 </div>
+                <div className='w3-col w3-container' style={{width: '2em', flexGrow: '1'}}></div>
               </div>
             </div>
           </div>
