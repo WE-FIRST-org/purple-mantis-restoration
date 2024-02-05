@@ -9,21 +9,31 @@ import appStylesHref from "./app.css";
 import w3css from "./w3.css";
 
 import type { LinksFunction } from "@remix-run/node";
-import { useState } from "react";
-
-
-// settings
+import { useEffect, useState } from "react";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: appStylesHref },
   { rel: "stylesheet", href: w3css },
 ];
 
+const throttleRamp = 0.05;
+const steerRamp = 0.07;
+
+const data = {
+  speed: 0, // [-100, 100] 
+  turn: 0,  // [-100, 100]
+  aim: 0,   // [-1, 1]
+  shoot: 0, // {0, 1}
+  shootSpeed: 0  // [0, 100]
+}
+
 export default function App() {
   const [throttle, setThrottle] = useState(0);
   const [steer, setSteer] = useState(0);
   const [aim, setAim] = useState(0);
+  const [shootSpeed, setShootSpeed] = useState(0);
   const [shoot, setShoot] = useState(false);
+  const [currIter, nextiter] = useState(false);
 
   function driveFuncs(key: string, down: boolean): void {
     switch (key) {
@@ -57,6 +67,26 @@ export default function App() {
         break;
     }
   }
+  useEffect(() => {
+    setTimeout(() => {
+      nextiter(!currIter)
+    }, 10)
+
+    if (throttle > 0) data.speed += (100 - data.speed) * throttleRamp;
+    else if (throttle < 0) data.speed += (-100 - data.speed) * throttleRamp;
+    else data.speed += (-data.speed) * throttleRamp;
+
+    if (steer > 0) data.turn += (100 - data.turn) * steerRamp;
+    else if (steer < 0) data.turn += (-100 - data.turn) * steerRamp;
+    else data.turn += (-data.turn) * steerRamp;
+
+    data.shoot = shoot ? 1 : 0;
+
+    data.aim = aim;
+
+    data.shootSpeed = shootSpeed;
+
+  }, [currIter])
 
   function keybinds(event: React.KeyboardEvent): void {
     driveFuncs(event.key.toLowerCase(), event.type == "keydown");
@@ -79,7 +109,26 @@ export default function App() {
             <div className="w3-display-topmiddle" style={{ height: '44px', width: '90%' }}>
               <div className="" style={{ height: '20px' }}></div>
               <div className="w3-border" style={{ height: '24px', width: '100%' }}>
-                <div className="w3-blue" style={{ height: '24px', width: throttle + '%' }}></div>
+                <div style={{
+                  height: '22px', width: Math.abs(data.speed) + '%',
+                  backgroundColor: `rgb(${255 * (data.speed > 0 ? 0 : 1)},0 ,${200 * (data.speed > 0 ? 1 : 0)})`
+                }}></div>
+              </div>
+
+              <div className="w3-border" style={{ height: '24px', width: '100%', display: 'flex' }}>
+                <div style={{
+                  height: '22px', width: `${data.turn < 0 ? (100 + data.turn) / 2 : 50}%`,
+                }}></div>
+
+                <div style={{
+                  height: '22px', width: `${data.turn < 0 ? -data.turn / 2 : 0}%`,
+                  backgroundColor: `rgb(3,3,3)`
+                }}></div>
+
+                <div style={{
+                  height: '22px', width: `${data.turn > 0 ? data.turn / 2 : 0}%`,
+                  backgroundColor: `rgb(3,3,3)`
+                }}></div>
               </div>
             </div>
 
@@ -136,7 +185,7 @@ export default function App() {
 
           <div className="w3-display-bottommiddle w3-container" style={{ width: '75%' }}>
             <div className='w3-col'>
-              <input type="range" min="1" max="100" defaultValue="0" className="slider" id="myRange" style={{ width: '100%' }} />
+              <input type="range" min="0" max="100" defaultValue="0" className="slider" onChange={e => setShootSpeed(Number(e.target.value))} id="myRange" style={{ width: '100%' }} />
               <div className="w3-row" style={{ height: '20px' }}></div>
             </div>
           </div>
@@ -144,6 +193,7 @@ export default function App() {
           <Scripts />
           <LiveReload />
         </body>
-      </html>
-    </>);
+      </html >
+    </>
+  );
 }
