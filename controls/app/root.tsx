@@ -35,6 +35,7 @@ export default function App() {
   const [shoot, setShoot] = useState(false);
   const [currIter, nextiter] = useState(false);
 
+
   function driveFuncs(key: string, down: boolean): void {
     switch (key) {
       case 'w':
@@ -55,22 +56,22 @@ export default function App() {
         break;
       case 'j':
         if (down) setAim(-1);
-        if (!down && aim == -1) setSteer(0);
+        if (!down && aim == -1) setAim(0);
         break;
       case 'k':
         if (down) setAim(1);
-        if (!down && aim == 1) setSteer(0);
+        if (!down && aim == 1) setAim(0);
         break;
       case 'h':
         if (down) setShoot(true);
         if (!down) setShoot(false);
-        break;
+        break;        
     }
   }
   useEffect(() => {
     setTimeout(() => {
       nextiter(!currIter)
-    }, 10)
+    }, 5)
 
     if (throttle > 0) data.speed += (100 - data.speed) * throttleRamp;
     else if (throttle < 0) data.speed += (-100 - data.speed) * throttleRamp;
@@ -79,12 +80,27 @@ export default function App() {
     if (steer > 0) data.turn += (100 - data.turn) * steerRamp;
     else if (steer < 0) data.turn += (-100 - data.turn) * steerRamp;
     else data.turn += (-data.turn) * steerRamp;
+    
+    data.speed = Number(data.speed.toFixed(6));
+    data.turn = Number(data.turn.toFixed(6));
 
     data.shoot = shoot ? 1 : 0;
 
     data.aim = aim;
 
     data.shootSpeed = shootSpeed;
+
+    fetch(
+      "http://127.0.0.1:8000",
+      {
+        method: "post",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/text",
+        },
+        body: JSON.stringify(data)
+      }
+    ).then(() => {}).catch(() => {});
 
   }, [currIter])
 
