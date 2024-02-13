@@ -1,6 +1,5 @@
-import Image from "next/image";
 'use client'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const throttleRamp = 0.05;
 const steerRamp = 0.07;
