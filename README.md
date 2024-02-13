@@ -24,4 +24,17 @@ npm run build
 - the static website is now in the `controls/public/build` directory
 - move the files in `controls/public` to `mantis/public`
 
+## Static Remix Site
+- static build is done using the a script, based off this repo [https://github.com/mjackson/remix-ssg-example](https://github.com/mjackson/remix-ssg-example)
 
+- scripts are in `package.json`
+- static generation is as such
+```bash
+$ npm run build
+$ npm start
+```
+Then, in another tab:
+```bash
+$ npm run build-static
+
+```
