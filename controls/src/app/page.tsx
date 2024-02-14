@@ -1,19 +1,18 @@
 'use client'
 import React, { useEffect, useState } from "react";
 
-const throttleRamp = 0.05;
-const steerRamp = 0.07;
-
-const data = {
-  speed: 0, // [-100, 100] 
-  turn: 0,  // [-100, 100]
-  aim: 0,   // [-1, 1]
-  shoot: 0, // {0, 1}
-  shootSpeed: 0  // [0, 100]
-}
-
 export default function Home() {
+  
+  const [data, setData] = useState({
+    speed: 0, // [-100, 100] 
+    turn: 0,  // [-100, 100]
+    aim: 0,   // [-1, 1]
+    shoot: 0, // {0, 1}
+    shootSpeed: 0  // [0, 100]
+  });
 
+  const throttleRamp = 0.05;
+  const steerRamp = 0.07;
   const [throttle, setThrottle] = useState(0);
   const [steer, setSteer] = useState(0);
   const [aim, setAim] = useState(0);
@@ -76,6 +75,11 @@ export default function Home() {
 
     data.shootSpeed = shootSpeed;
 
+    setData(data);
+    
+    console.log(data);
+    console.log("throttleramp" + throttleRamp);
+    return;
     fetch(
       "http://127.0.0.1:8000",
       {

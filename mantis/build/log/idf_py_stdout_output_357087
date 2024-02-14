@@ -1,0 +1,343 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.2 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 14 2024 00:13:17[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0adb8h ( 44472) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ade0 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001cf40 vaddr=40080000 size=030d8h ( 12504) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16ee8h ( 93928) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=00036f10 vaddr=400830d8 size=08f90h ( 36752) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (202) cpu_start: Pro cpu up.[0m
+[0;32mI (202) cpu_start: Starting app cpu, entry point is 0x40081100[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) cpu_start: Application information:[0m
+[0;32mI (224) cpu_start: Project name:     main[0m
+[0;32mI (229) cpu_start: App version:      c05f030-dirty[0m
+[0;32mI (235) cpu_start: Compile time:     Feb 14 2024 00:13:09[0m
+[0;32mI (241) cpu_start: ELF file SHA256:  105ec3abb4850fc2...[0m
+[0;32mI (247) cpu_start: ESP-IDF:          v5.1.2[0m
+[0;32mI (252) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (256) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (261) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (266) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (279) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (292) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 4008C068 len 00013F98 (79 KiB): IRAM[0m
+[0;32mI (306) spi_flash: detected chip: generic[0m
+[0;32mI (309) spi_flash: flash io: dio[0m
+[0;33mW (313) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (331) app_start: Starting scheduler on CPU1[0m
+[0;32mI (331) main_task: Started on CPU0[0m
+[0;32mI (341) main_task: Calling app_main()[0m
+dasdsadskdkasdskad 1 
+[0;32mI (341) PWM Driver Logging: Create timer and operator for group [0m
+0
+[0;32mI (351) PWM Driver Logging: Connect timer and operator[0m
+[0;32mI (351) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (361) PWM Driver Logging: Set generator action on timer and compare event[0m
+[0;32mI (371) PWM Driver Logging: Enable and start timer[0m
+uhh 0.000000
+uhh 0.050000
+uhh 0.100000
+uhh 0.150000
+uhh 0.200000
+uhh 0.250000
+uhh 0.300000
+uhh 0.350000
+uhh 0.400000
+uhh 0.450000
+uhh 0.500000
+uhh 0.550000
+uhh 0.600000
+uhh 0.650000
+uhh 0.700000
+uhh 0.750000
+uhh 0.800000
+uhh 0.850000
+uhh 0.900000
+uhh 0.950000
+uhh 1.000000
+uhh 0.950000
+uhh 0.900000
+uhh 0.850000
+uhh 0.800000
+uhh 0.750000
+uhh 0.700000
+uhh 0.650000
+uhh 0.600000
+uhh 0.550000
+uhh 0.500000
+uhh 0.450000
+uhh 0.400000
+uhh 0.350000
+uhh 0.300000
+uhh 0.250000
+uhh 0.200000
+uhh 0.150000
+uhh 0.100000
+uhh 0.050000
+uhh -0.000000
+uhh -0.050000
+uhh -0.100000
+uhh -0.150000
+uhh -0.200000
+uhh -0.250000
+uhh -0.300000
+uhh -0.350000
+uhh -0.400000
+[0;31mE (15081) mcpwm: mcpwm_comparator_set_compare_value(140): compare value out of range[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d5a96
+file: "./main/servo.c" line 115
+func: setPWMSignal
+expression: mcpwm_comparator_set_compare_value(comparators[i], comparedpulse)
+
+abort() was called at PC 0x400857ef on core 0
+
+
+Backtrace: 0x40081732:0x3ffb4c30 0x400857f9:0x3ffb4c50 0x4008abae:0x3ffb4c70 0x400857ef:0x3ffb4ce0 0x400d5a96:0x3ffb4d10 0x400d5ad8:0x3ffb4d30 0x400e6758:0x3ffb4d60 0x40087c99:0x3ffb4d90
+
+
+
+
+ELF file SHA256: 105ec3abb4850fc2
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (30) boot: ESP-IDF v5.1.2 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 14 2024 00:13:17[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0adb8h ( 44472) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ade0 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001cf40 vaddr=40080000 size=030d8h ( 12504) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16ee8h ( 93928) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=00036f10 vaddr=400830d8 size=08f90h ( 36752) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (202) cpu_start: Pro cpu up.[0m
+[0;32mI (202) cpu_start: Starting app cpu, entry point is 0x40081100[0m
+[0;32mI (189) cpu_start: App cpu up.[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) cpu_start: Application information:[0m
+[0;32mI (225) cpu_start: Project name:     main[0m
+[0;32mI (229) cpu_start: App version:      c05f030-dirty[0m
+[0;32mI (235) cpu_start: Compile time:     Feb 14 2024 00:13:09[0m
+[0;32mI (241) cpu_start: ELF file SHA256:  105ec3abb4850fc2...[0m
+[0;32mI (247) cpu_start: ESP-IDF:          v5.1.2[0m
+[0;32mI (252) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (256) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (261) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (266) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (279) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (286) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (292) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 4008C068 len 00013F98 (79 KiB): IRAM[0m
+[0;32mI (306) spi_flash: detected chip: generic[0m
+[0;32mI (309) spi_flash: flash io: dio[0m
+[0;33mW (313) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (331) app_start: Starting scheduler on CPU1[0m
+[0;32mI (331) main_task: Started on CPU0[0m
+[0;32mI (341) main_task: Calling app_main()[0m
+dasdsadskdkasdskad 1 
+[0;32mI (341) PWM Driver Logging: Create timer and operator for group [0m
+0
+[0;32mI (351) PWM Driver Logging: Connect timer and operator[0m
+[0;32mI (351) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (361) PWM Driver Logging: Set generator action on timer and compare event[0m
+[0;32mI (371) PWM Driver Logging: Enable and start timer[0m
+uhh 0.000000
+uhh 0.050000
+uhh 0.100000
+uhh 0.150000
+uhh 0.200000
+uhh 0.250000
+uhh 0.300000
+uhh 0.350000
+uhh 0.400000
+uhh 0.450000
+uhh 0.500000
+uhh 0.550000
+uhh 0.600000
+uhh 0.650000
+uhh 0.700000
+uhh 0.750000
+uhh 0.800000
+uhh 0.850000
+uhh 0.900000
+uhh 0.950000
+uhh 1.000000
+uhh 0.950000
+uhh 0.900000
+uhh 0.850000
+uhh 0.800000
+uhh 0.750000
+uhh 0.700000
+uhh 0.650000
+uhh 0.600000
+uhh 0.550000
+uhh 0.500000
+uhh 0.450000
+uhh 0.400000
+uhh 0.350000
+uhh 0.300000
+uhh 0.250000
+uhh 0.200000
+uhh 0.150000
+uhh 0.100000
+uhh 0.050000
+uhh -0.000000
+uhh -0.050000
+uhh -0.100000
+uhh -0.150000
+uhh -0.200000
+uhh -0.250000
+uhh -0.300000
+uhh -0.350000
+uhh -0.400000
+[0;31mE (15081) mcpwm: mcpwm_comparator_set_compare_value(140): compare value out of range[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d5a96
+file: "./main/servo.c" line 115
+func: setPWMSignal
+expression: mcpwm_comparator_set_compare_value(comparators[i], comparedpulse)
+
+abort() was called at PC 0x400857ef on core 0
+
+
+Backtrace: 0x40081732:0x3ffb4c30 0x400857f9:0x3ffb4c50 0x4008abae:0x3ffb4c70 0x400857ef:0x3ffb4ce0 0x400d5a96:0x3ffb4d10 0x400d5ad8:0x3ffb4d30 0x400e6758:0x3ffb4d60 0x40087c99:0x3ffb4d90
+
+
+
+
+ELF file SHA256: 105ec3abb4850fc2
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (30) boot: ESP-IDF v5.1.2 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 14 2024 00:13:17[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0adb8h ( 44472) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ade0 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001cf40 vaddr=40080000 size=030d8h ( 12504) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16ee8h ( 93928) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=00036f10 vaddr=400830d8 size=08f90h ( 36752) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (202) cpu_start: Pro cpu up.[0m
+[0;32mI (202) cpu_start: Starting app cpu, entry point is 0x40081100[0m
+[0;32mI (189) cpu_start: App cpu up.[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) cpu_start: Application information:[0m
+[0;32mI (225) cpu_start: Project name:     main[0m
+[0;32mI (229) cpu_start: App version:      c05f030-dirty[0m
+[0;32mI (235) cpu_start: Compile time:     Feb 14 2024 00:13:09[0m
+[0;32mI (241) cpu_start: ELF file SHA256:  105ec3abb4850fc2...[0m
+[0;32mI (247) cpu_start: ESP-IDF:          v5.1.2[0m
+[0;32mI (252) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (256) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (261) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (266) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (279) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (286) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (292) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 4008C068 len 00013F98 (79 KiB): IRAM[0m
+[0;32mI (306) spi_flash: detected chip: generic[0m
+[0;32mI (309) spi_flash: flash io: dio[0m
+[0;33mW (313) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (331) app_start: Starting scheduler on CPU1[0m
+[0;32mI (331) main_task: Started on CPU0[0m
+[0;32mI (341) main_task: Calling app_main()[0m
+dasdsadskdkasdskad 1 
+[0;32mI (341) PWM Driver Logging: Create timer and operator for group [0m
+0
+[0;32mI (351) PWM Driver Logging: Connect timer and operator[0m
+[0;32mI (351) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (361) PWM Driver Logging: Set generator action on timer and compare event[0m
+[0;32mI (371) PWM Driver Logging: Enable and start timer[0m
+uhh 0.000000
+uhh 0.050000
+uhh 0.100000
+uhh 0.150000
+uhh 0.200000
+uhh 0.250000
+uhh 0.300000
