@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "main",
-    "project_version":    "c05f030-dirty",
+    "project_version":    "ad6818b-dirty",
     "project_path":       "/home/jimmy/code/purple-mantis-restoration/mantis",
     "idf_path":           "/home/jimmy/code/esp-idf",
     "build_dir":          "/home/jimmy/code/purple-mantis-restoration/mantis/build",

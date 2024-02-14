@@ -1,0 +1,149 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081100: call_start_cpu1 at /home/jimmy/code/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+[0m
+[0;33m0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081732: panic_abort at /home/jimmy/code/esp-idf/components/esp_system/panic.c:452
+0x400857f9: esp_system_abort at /home/jimmy/code/esp-idf/components/esp_system/port/esp_system_chip.c:84
+0x4008abae: abort at /home/jimmy/code/esp-idf/components/newlib/abort.c:38
+0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+0x400d5a03: initMotorControl at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:94 (discriminator 3)
+0x400d5ae9: app_main at /home/jimmy/code/purple-mantis-restoration/mantis/main/main.c:16
+0x400e6784: main_task at /home/jimmy/code/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+0x40087c99: vPortTaskWrapper at /home/jimmy/code/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081100: call_start_cpu1 at /home/jimmy/code/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+[0m
+[0;33m0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081732: panic_abort at /home/jimmy/code/esp-idf/components/esp_system/panic.c:452
+0x400857f9: esp_system_abort at /home/jimmy/code/esp-idf/components/esp_system/port/esp_system_chip.c:84
+0x4008abae: abort at /home/jimmy/code/esp-idf/components/newlib/abort.c:38
+0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+0x400d5a03: initMotorControl at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:94 (discriminator 3)
+0x400d5ae9: app_main at /home/jimmy/code/purple-mantis-restoration/mantis/main/main.c:16
+0x400e6784: main_task at /home/jimmy/code/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+0x40087c99: vPortTaskWrapper at /home/jimmy/code/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081100: call_start_cpu1 at /home/jimmy/code/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+[0m
+[0;33m0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081732: panic_abort at /home/jimmy/code/esp-idf/components/esp_system/panic.c:452
+0x400857f9: esp_system_abort at /home/jimmy/code/esp-idf/components/esp_system/port/esp_system_chip.c:84
+0x4008abae: abort at /home/jimmy/code/esp-idf/components/newlib/abort.c:38
+0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+0x400d5a03: initMotorControl at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:94 (discriminator 3)
+0x400d5ae9: app_main at /home/jimmy/code/purple-mantis-restoration/mantis/main/main.c:16
+0x400e6784: main_task at /home/jimmy/code/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+0x40087c99: vPortTaskWrapper at /home/jimmy/code/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081100: call_start_cpu1 at /home/jimmy/code/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+[0m
+[0;33m0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081732: panic_abort at /home/jimmy/code/esp-idf/components/esp_system/panic.c:452
+0x400857f9: esp_system_abort at /home/jimmy/code/esp-idf/components/esp_system/port/esp_system_chip.c:84
+0x4008abae: abort at /home/jimmy/code/esp-idf/components/newlib/abort.c:38
+0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+0x400d5a03: initMotorControl at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:94 (discriminator 3)
+0x400d5ae9: app_main at /home/jimmy/code/purple-mantis-restoration/mantis/main/main.c:16
+0x400e6784: main_task at /home/jimmy/code/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+0x40087c99: vPortTaskWrapper at /home/jimmy/code/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081100: call_start_cpu1 at /home/jimmy/code/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+[0m
+[0;33m0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081732: panic_abort at /home/jimmy/code/esp-idf/components/esp_system/panic.c:452
+0x400857f9: esp_system_abort at /home/jimmy/code/esp-idf/components/esp_system/port/esp_system_chip.c:84
+0x4008abae: abort at /home/jimmy/code/esp-idf/components/newlib/abort.c:38
+0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+0x400d5a03: initMotorControl at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:94 (discriminator 3)
+0x400d5ae9: app_main at /home/jimmy/code/purple-mantis-restoration/mantis/main/main.c:16
+0x400e6784: main_task at /home/jimmy/code/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+0x40087c99: vPortTaskWrapper at /home/jimmy/code/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081100: call_start_cpu1 at /home/jimmy/code/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+[0m
+[0;33m0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081732: panic_abort at /home/jimmy/code/esp-idf/components/esp_system/panic.c:452
+0x400857f9: esp_system_abort at /home/jimmy/code/esp-idf/components/esp_system/port/esp_system_chip.c:84
+0x4008abae: abort at /home/jimmy/code/esp-idf/components/newlib/abort.c:38
+0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+0x400d5a03: initMotorControl at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:94 (discriminator 3)
+0x400d5ae9: app_main at /home/jimmy/code/purple-mantis-restoration/mantis/main/main.c:16
+0x400e6784: main_task at /home/jimmy/code/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+0x40087c99: vPortTaskWrapper at /home/jimmy/code/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081100: call_start_cpu1 at /home/jimmy/code/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+[0m
+[0;33m0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081732: panic_abort at /home/jimmy/code/esp-idf/components/esp_system/panic.c:452
+0x400857f9: esp_system_abort at /home/jimmy/code/esp-idf/components/esp_system/port/esp_system_chip.c:84
+0x4008abae: abort at /home/jimmy/code/esp-idf/components/newlib/abort.c:38
+0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+0x400d5a03: initMotorControl at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:94 (discriminator 3)
+0x400d5ae9: app_main at /home/jimmy/code/purple-mantis-restoration/mantis/main/main.c:16
+0x400e6784: main_task at /home/jimmy/code/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+0x40087c99: vPortTaskWrapper at /home/jimmy/code/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081100: call_start_cpu1 at /home/jimmy/code/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+[0m
+[0;33m0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081732: panic_abort at /home/jimmy/code/esp-idf/components/esp_system/panic.c:452
+0x400857f9: esp_system_abort at /home/jimmy/code/esp-idf/components/esp_system/port/esp_system_chip.c:84
+0x4008abae: abort at /home/jimmy/code/esp-idf/components/newlib/abort.c:38
+0x400857ef: _esp_error_check_failed at /home/jimmy/code/esp-idf/components/esp_system/esp_err.c:50
+0x400d5891: initMotor at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:41 (discriminator 1)
+0x400d5a03: initMotorControl at /home/jimmy/code/purple-mantis-restoration/mantis/main/servo.c:94 (discriminator 3)
+0x400d5ae9: app_main at /home/jimmy/code/purple-mantis-restoration/mantis/main/main.c:16
+0x400e6784: main_task at /home/jimmy/code/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+0x40087c99: vPortTaskWrapper at /home/jimmy/code/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m
