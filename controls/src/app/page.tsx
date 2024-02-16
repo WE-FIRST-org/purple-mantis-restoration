@@ -1,6 +1,11 @@
 'use client'
 import React, { useEffect, useState } from "react";
 
+let urlTarg = "";
+if(typeof window !== 'undefined') {
+  urlTarg = window.location.origin.substring(0, window.location.origin.length - window.location.port.length);
+}
+
 export default function Home() {
   
   const [data, setData] = useState({
@@ -8,7 +13,7 @@ export default function Home() {
     turn: 0,  // [-100, 100]
     aim: 0,   // [-1, 1]
     shoot: 0, // {0, 1}
-    shootSpeed: 0  // [0, 100]
+    shtspeed: 0  // [0, 100]
   });
 
   const throttleRamp = 0.05;
@@ -66,22 +71,18 @@ export default function Home() {
     else if (steer < 0) data.turn += (-100 - data.turn) * steerRamp;
     else data.turn += (-data.turn) * steerRamp;
     
-    data.speed = Number(data.speed.toFixed(6));
-    data.turn = Number(data.turn.toFixed(6));
+    data.speed = Number(data.speed.toFixed(5));
+    data.turn = Number(data.turn.toFixed(5));
 
     data.shoot = shoot ? 1 : 0;
 
     data.aim = aim;
 
-    data.shootSpeed = shootSpeed;
-
+    data.shtspeed = shootSpeed;
     setData(data);
-    
-    console.log(data);
-    console.log("throttleramp" + throttleRamp);
-    return;
+
     fetch(
-      "http://127.0.0.1:8000",
+      urlTarg + "8000",
       {
         method: "post",
         mode: "no-cors",
@@ -96,6 +97,10 @@ export default function Home() {
 
   function keybinds(event: React.KeyboardEvent): void {
     driveFuncs(event.key.toLowerCase(), event.type == "keydown");
+  }
+
+  function buttonChange(event: React.MouseEvent): void {
+    driveFuncs((event.target as any).id, event.type == "mousedown");
   }
 
   return (
@@ -143,20 +148,20 @@ export default function Home() {
                 <div className='w3-row' style={{ width: '100%', display: 'flex' }} >
                   <div className='w3-col w3-container' style={{ maxWidth: '4em', width: '2em', flexGrow: '1' }}></div>
                   <div className='w3-col w3-third w3-container' style={{ padding: '0px', flexGrow: '0' }} >
-                    <button className="w3-circle w3-ripple w3-grey" id="w" style={{ height: "5em", width: "5em", padding: '0px' }}> W </button>
+                    <button onMouseDown={buttonChange} onMouseUp={buttonChange} className="w3-circle w3-ripple w3-grey" id="w" style={{ height: "5em", width: "5em", padding: '0px' }}> W </button>
                   </div>
                   <div className='w3-col w3-third w3-container' style={{ padding: '0px' }}>
-                    <button className="w3-circle w3-ripple w3-grey" id="k" style={{ height: "5em", width: "5em", padding: '0px' }}> K </button>
+                    <button onMouseDown={buttonChange} onMouseUp={buttonChange} className="w3-circle w3-ripple w3-grey" id="k" style={{ height: "5em", width: "5em", padding: '0px' }}> K </button>
                   </div>
                 </div>
                 <div className='w3-row' style={{ height: '0.5em', width: '100%', display: 'flex' }} ></div>
                 <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex' }} >
                   <div className='w3-col w3-container' style={{ maxWidth: '4em', width: '2em', flexGrow: '1' }}></div>
                   <div className='w3-col w3-third w3-container' style={{ padding: '0px' }} >
-                    <button className="w3-circle w3-ripple w3-grey" id="s" style={{ height: "5em", width: "5em", padding: '0px' }}> S </button>
+                    <button onMouseDown={buttonChange} onMouseUp={buttonChange} className="w3-circle w3-ripple w3-grey" id="s" style={{ height: "5em", width: "5em", padding: '0px' }}> S </button>
                   </div>
                   <div className='w3-col w3-third w3-container' style={{ padding: '0px' }}>
-                    <button className="w3-circle w3-ripple w3-grey" id="j" style={{ height: "5em", width: "5em", padding: '0px' }}> J </button>
+                    <button onMouseDown={buttonChange} onMouseUp={buttonChange} className="w3-circle w3-ripple w3-grey" id="j" style={{ height: "5em", width: "5em", padding: '0px' }}> J </button>
                   </div>
 
                 </div>
@@ -169,10 +174,10 @@ export default function Home() {
               <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex' }} ></div>
               <div className='w3-row' style={{ height: '5em', width: '100%', display: 'flex', marginLeft: 'auto', alignItems: 'flex-end' }}>
                 <div className='w3-col w3-third w3-container' style={{ padding: '0px' }} >
-                  <button className="w3-circle w3-ripple w3-grey w3-col w3-third w3-right" id="a" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px' }}> A </button>
+                  <button onMouseDown={buttonChange} onMouseUp={buttonChange} className="w3-circle w3-ripple w3-grey w3-col w3-third w3-right" id="a" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px' }}> A </button>
                 </div>
                 <div className='w3-col w3-third w3-container' style={{ padding: '0px' }}>
-                  <button className="w3-circle w3-ripple w3-grey w3-col w3-third w3-right" id="d" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px' }}> D </button>
+                  <button onMouseDown={buttonChange} onMouseUp={buttonChange} className="w3-circle w3-ripple w3-grey w3-col w3-third w3-right" id="d" style={{ height: "5em", width: "5em", textAlign: 'center', padding: '0px' }}> D </button>
                 </div>
                 <div className='w3-col w3-container' style={{ width: '2em', flexGrow: '1' }}></div>
               </div>
@@ -180,7 +185,7 @@ export default function Home() {
               <div className='w3-row' style={{ display: 'flex', marginLeft: 'auto' }}>
                 <div className='w3-col w3-container' style={{ width: '4em', flexGrow: '1' }}></div>
                 <div className='w3-col w3-quarter w3-container' style={{ padding: '0px', flexGrow: '0.5' }}>
-                  <button className="w3-circle w3-ripple w3-grey" id="h" style={{ height: "5em", width: "5em", padding: '0px' }}> H </button>
+                  <button onMouseDown={buttonChange} onMouseUp={buttonChange} className="w3-circle w3-ripple w3-grey" id="h" style={{ height: "5em", width: "5em", padding: '0px' }}> H </button>
                 </div>
                 <div className='w3-col w3-container' style={{ width: '2em', flexGrow: '1' }}></div>
               </div>
