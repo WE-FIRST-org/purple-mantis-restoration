@@ -1,5 +1,6 @@
 #ifndef DRIVE_H
 #define DRIVE_H
+#include <ESP32Servo.h>
 
 class Drive {
     private:
@@ -9,13 +10,13 @@ class Drive {
     Servo r0;
     Servo r1;
 
-	public:
+    public:
 
-	void setup(int p0, int p1, int p2, int p3); // setup
+    void setup(int p0, int p1, int p2, int p3); // setup
 
-	void arcade(double speed, double turn); // arcade drive
+    void arcade(double speed, double turn); // arcade drive
 
-	void loop(); // test func
+    void loop(); // test func
 };
 
 #endif

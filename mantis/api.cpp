@@ -24,19 +24,26 @@
  */
 #include <stdio.h>
 #include <WiFi.h>
+#include "drive.h"
 
 #define WIFI_SSID "purpol mantis"
 #define WIFI_PASS "pmpmpmpm"
 
 WiFiServer server(8000);
+Drive drive;
+
 
 void APISetup() {
+    drive.setup(4, 16, 5, 17); // left, left, right, right
     WiFi.mode(WIFI_AP);
     WiFi.softAP(WIFI_SSID, WIFI_PASS); 
-
+    
+    #ifndef SERIALBEGIN
+    #define SERIALBEGIN 
+    Serial.begin(9600);
+    #endif
     IPAddress IP = WiFi.softAPIP();
     
-    Serial.begin(9600);
     Serial.print("AP IP address: ");
     Serial.println(IP);
     
@@ -92,13 +99,35 @@ void processBuffer() {
 		}
     }
 }
+
+void runBot() {
+    double speed = values[0];
+    speed /= 100;
+    double turning = values[1];
+    turning /= 100;
+    drive.arcade(speed, turning);
+}
+
+void commsLost() {
+    // TODO: handle comms loss 
+    return;
+}
+
+unsigned long lastRead;
+
 void APIRead(void * params) {
     while(true) {
         WiFiClient client = server.available();
         if (client) {
+            Serial.println("uhh");
+            lastRead = millis();
             int reading = 0;
             while (client.connected()) {
+
+                if(millis() - lastRead > 100) commsLost();
+                
                 if (client.available()) {      
+                    lastRead = millis();
                     char c = client.read();
 
                     if(c == '{') {
@@ -112,8 +141,17 @@ void APIRead(void * params) {
                         pos %= BUFFERSIZE;
                     }
                     if(c == '}') {
+                        Serial.println("received");
                         reading = 0;
                         processBuffer();
+                        runBot();
+                        client.flush();
+                        client.println("HTTP/1.1 200 OK");
+                        client.println("Content-type:text/html");
+                        client.println("Connection: close");
+                        client.println("\r\n");
+                        break;
+                        //Serial.println(values[0]);
                     }
                 }
             }

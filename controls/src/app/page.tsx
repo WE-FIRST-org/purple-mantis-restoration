@@ -1,13 +1,13 @@
 'use client'
 import React, { useEffect, useState } from "react";
 
-let urlTarg = "";
-if(typeof window !== 'undefined') {
-  urlTarg = window.location.origin.substring(0, window.location.origin.length - window.location.port.length);
+let urlTarg = "http://192.168.4.1:";
+if (typeof window !== 'undefined') {
+  //urlTarg = window.location.origin.substring(0, window.location.origin.length - window.location.port.length);
 }
 
 export default function Home() {
-  
+
   const [data, setData] = useState({
     speed: 0, // [-100, 100] 
     turn: 0,  // [-100, 100]
@@ -24,7 +24,7 @@ export default function Home() {
   const [shootSpeed, setShootSpeed] = useState(0);
   const [shoot, setShoot] = useState(false);
   const [currIter, nextiter] = useState(false);
-
+  const [sending, setSend] = useState(false);
 
   function driveFuncs(key: string, down: boolean): void {
     switch (key) {
@@ -55,7 +55,7 @@ export default function Home() {
       case 'h':
         if (down) setShoot(true);
         if (!down) setShoot(false);
-        break;        
+        break;
     }
   }
   useEffect(() => {
@@ -70,7 +70,7 @@ export default function Home() {
     if (steer > 0) data.turn += (100 - data.turn) * steerRamp;
     else if (steer < 0) data.turn += (-100 - data.turn) * steerRamp;
     else data.turn += (-data.turn) * steerRamp;
-    
+
     data.speed = Number(data.speed.toFixed(5));
     data.turn = Number(data.turn.toFixed(5));
 
@@ -80,18 +80,20 @@ export default function Home() {
 
     data.shtspeed = shootSpeed;
     setData(data);
-
-    fetch(
-      urlTarg + "8000",
-      {
-        method: "post",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/text",
-        },
-        body: JSON.stringify(data)
-      }
-    ).then(() => {}).catch(() => {});
+    if (!sending) {
+      setSend(true);
+      fetch(
+        urlTarg + "8000",
+        {
+          method: "post",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/text",
+          },
+          body: JSON.stringify(data)
+        }
+      ).then(() => { }).catch(() => { }).finally(() => { setSend(false) });
+    }
 
   }, [currIter])
 
