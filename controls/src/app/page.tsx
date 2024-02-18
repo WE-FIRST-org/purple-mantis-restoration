@@ -16,8 +16,10 @@ export default function Home() {
     shtspeed: 0  // [0, 100]
   });
 
-  const throttleRamp = 0.05;
-  const steerRamp = 0.07;
+  const throttleRamp = 0.5;
+  const throttleRampDown = 0.05;
+  const steerRamp = 0.1;
+  const steerRampDown = 0.07;
   const [throttle, setThrottle] = useState(0);
   const [steer, setSteer] = useState(0);
   const [aim, setAim] = useState(0);
@@ -65,11 +67,11 @@ export default function Home() {
 
     if (throttle > 0) data.speed += (100 - data.speed) * throttleRamp;
     else if (throttle < 0) data.speed += (-100 - data.speed) * throttleRamp;
-    else data.speed += (-data.speed) * throttleRamp;
+    else data.speed += (-data.speed) * throttleRampDown;
 
     if (steer > 0) data.turn += (100 - data.turn) * steerRamp;
     else if (steer < 0) data.turn += (-100 - data.turn) * steerRamp;
-    else data.turn += (-data.turn) * steerRamp;
+    else data.turn += (-data.turn) * steerRampDown;
 
     data.speed = Number(data.speed.toFixed(5));
     data.turn = Number(data.turn.toFixed(5));

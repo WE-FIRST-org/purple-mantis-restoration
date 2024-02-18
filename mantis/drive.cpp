@@ -1,12 +1,13 @@
 #include <ESP32Servo.h>
 #include "drive.h"
+#define MAX_SPEED 0.25 // max speed: 0 -> 1.0
 
 
 void Drive::setup(int p0, int p1, int p2, int p3) {
-    l0.setPeriodHertz(50);    // standard 50 hz = 20ms
-    l1.setPeriodHertz(50);    
-    r0.setPeriodHertz(50);    
-    r1.setPeriodHertz(50);    
+    l0.setPeriodHertz(500);    // standard 50 hz = 20ms
+    l1.setPeriodHertz(500);    
+    r0.setPeriodHertz(500);    
+    r1.setPeriodHertz(500);    
 
     #ifndef SERIALBEGIN
     #define SERIALBEGIN
@@ -14,15 +15,18 @@ void Drive::setup(int p0, int p1, int p2, int p3) {
     #endif
 
     // dont use port 0, its used for boot as well so it acts weird
-    l0.attach(p0, 690, 2310); // attaches the servo on pin 18 to the servo object
-    l1.attach(p1, 690, 2310); // attaches the servo on pin 18 to the servo object
-    r0.attach(p2, 690, 2310); // attaches the servo on pin 18 to the servo object
-    r1.attach(p3, 690, 2310); // attaches the servo on pin 18 to the servo object
+    l0.attach(p0, 700, 2300); // attaches the servo on pin 18 to the servo object
+    l1.attach(p1, 700, 2300); // attaches the servo on pin 18 to the servo object
+    r0.attach(p2, 700, 2300); // attaches the servo on pin 18 to the servo object
+    r1.attach(p3, 700, 2300); // attaches the servo on pin 18 to the servo object
     }
 
 void Drive::arcade(double speed, double turn) {
+    speed *= MAX_SPEED; // max speed in drive.h
+    turn *= MAX_SPEED;
     double leftfp = speed + turn;
     double rightfp = turn - speed; // simulates reversed drive direction as well
+    
 
     /**
      * limits to 0 -> 180

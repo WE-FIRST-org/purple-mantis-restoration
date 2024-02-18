@@ -25,16 +25,21 @@
 #include <stdio.h>
 #include <WiFi.h>
 #include "drive.h"
+#include "shooter.h"
 
 #define WIFI_SSID "purpol mantis"
 #define WIFI_PASS "pmpmpmpm"
 
 WiFiServer server(8000);
 Drive drive;
+Shooter shooter;
 
 
 void APISetup() {
     drive.setup(4, 16, 5, 17); // left, left, right, right
+    shooter.setup(18, 19, 21);
+    
+    
     WiFi.mode(WIFI_AP);
     WiFi.softAP(WIFI_SSID, WIFI_PASS); 
     
@@ -80,7 +85,7 @@ int values[5];
 
 void processBuffer() {
     int section = -1;
-	int sign = 1;
+    int sign = 1;
     for(int caret = 0; caret < pos; caret++) { 
         if(buffer[caret] == '"') {		// determine category
 			section = (checkCategory(&caret));
@@ -106,10 +111,17 @@ void runBot() {
     double turning = values[1];
     turning /= 100;
     drive.arcade(speed, turning);
+
+    shooter.setSpeed(values[4]);
+
+    if(values[3] == 1) shooter.shoot();
+    else shooter.unshoot();
 }
 
 void commsLost() {
-    // TODO: handle comms loss 
+    drive.arcade(0,0);
+    shooter.setSpeed(0);
+    shooter.unshoot();
     return;
 }
 
